@@ -1,5 +1,5 @@
-Body{
-    background-image: url('assets/background\ im.jpg');
+body{
+    background-image: url('assets/tot.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -8,6 +8,28 @@ Body{
     margin: 0;
     padding: 0;
 }
+
+.page1 {
+    background-image: url('assets/back1.jpg');
+}
+
+.page2 {
+    background-image: url('assets/tot.jpg');
+    overflow: hidden;
+    height: 100vh;
+}
+
+.page3 {
+    background-image: url('assets/bckfre.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+    height: 100vh;
+}
+.page4 {
+    background-image: url('assets/stumps.jpg');
+}
+
 
 h1{
     color: #ffffff;
@@ -39,8 +61,40 @@ h2{
     margin-top: 1%;
 }
 
+h3{
+    color: #ffffff;
+    font-size: 4em;
+    margin-bottom: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    text-shadow: #000000 1px 2px 2px;
+    font-size:1rem;
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+
+    text-align: left;
+    margin-top: 0.5%;
+}
+
+h4{
+    color: #ffffff;
+    font-size: 4em;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    text-shadow: #000000 1px 2px 2px;
+    font-size:1.5rem;
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+
+    text-align: right;
+    margin-top: 1%;
+    padding-left: 120px;
+    padding-right: 120px;
+}
 p{
     color:#ffffff;
+    text-shadow: #000000 1px 2px 2px;
 }
 
 .first-para {
@@ -48,47 +102,129 @@ color:#ffffff;
 text-align: center;
 }
 
-
-.photo-container {
-    position:relative;
-    width: 100%;
-    height: 400px;
-    overflow:hidden;
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25%;
 }
 
-.photo {
-    position: absolute;
-    width: 150px;
+.portfolio-container {
+    position: relative;
+    width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.portfolio-photo {
+    position: static;
+    width: auto;
     height: auto;
     object-fit: cover;
-    transition: transform 0.3s ease; 
 }
 
-.photo:nth-child(1) {
-    top: 20%;
-    left: 25%;
-    transform: rotate(-10deg);
+.portfolio-btn:nth-child(1) img {
+    width: 500px;
+    transform: rotate(-20deg);
+    transition: transform 0.3s ease;
 }
 
-.photo:nth-child(2) {
-    top: 40%;
-    left: 40%;
-    transform: rotate(-5deg);
+.portfolio-btn:nth-child(2) img {
+    width: 250px;
+    height: auto;
+    transform: rotate(5deg);
+    transition: transform 0.3s ease;
 }
 
-.photo:nth-child(3) {
+.portfolio-btn:nth-child(3) img {
+    width: 350px;
+    transform: rotate(15deg);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-btn:nth-child(4) img {
+    width: 250px;
+    transform: rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-btn:nth-child(5) img {
+    width: 400px;
+    transform: rotate(-7deg);
+    transition: transform 0.3s ease;
+}
+
+/* Remove old positioning styles */
+.portfolio-photo:nth-child(1),
+.portfolio-photo:nth-child(2),
+.portfolio-photo:nth-child(3),
+.portfolio-photo:nth-child(4),
+.portfolio-photo:nth-child(5) {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    transform: none;
+    z-index: auto;
+}
+
+.portfolio-btn {
+    position: absolute;
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.portfolio-btn:nth-child(1):hover img {
+    transform: rotate(-20deg) scale(1.05);
+}
+
+.portfolio-btn:nth-child(2):hover img {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.portfolio-btn:nth-child(3):hover img {
+    transform: rotate(15deg) scale(1.05);
+}
+
+.portfolio-btn:nth-child(4):hover img {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.portfolio-btn:nth-child(5):hover img {
+    transform: rotate(-7deg) scale(1.05);
+}
+
+.portfolio-btn:nth-child(1) {
     top: 30%;
-    left: 55%;
-    transform: rotate(8deg);
+    left: 15px;
 }
 
-.photo:nth-child(4) {
+.portfolio-btn:nth-child(2) {
+    top: 25%;
+    left: 280px;
+    z-index: 1;
+}
+
+.portfolio-btn:nth-child(3) {
+    top: 17%;
+    left: 420px;
+}
+
+.portfolio-btn:nth-child(4) {
     top: 30%;
-    left: 70%;
-    transform: rotate(10deg);
+    left: 650px;
 }
 
-
+.portfolio-btn:nth-child(5) {
+    top: 43%;
+    left: 400px;
+    z-index: 5;
+}
 
 a {
     color: #ffffff;
@@ -101,8 +237,364 @@ a {
 
 .link-container {
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 60px;
     align-items: center;
     width: 97%;
     padding: 0 20px;
+}
+
+p {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/* Misogyny Page Styles */
+.misogyny-page .content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+.misogyny-page .video-container {
+    flex: 0 0 20%;
+    text-align: left;
+}
+
+.misogyny-page .video-container video {
+    width: 500%;
+    max-width: 100%;
+    height: auto;
+}
+
+.misogyny-page .text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.misogyny-page .text-container h1 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.misogyny-page .text-container p {
+    padding: 0;
+}
+
+/* Misogyny Page Styles */
+.beach-page .content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+.beach-page .video-container {
+    flex: 0 0 20%;
+    text-align: left;
+}
+
+.beach-page .video-container video {
+    width: 500%;
+    max-width: 100%;
+    height: auto;
+}
+
+.beach-page .text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.beach-page .text-container h1 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.beach-page .text-container p {
+    padding: 0;
+}
+
+/* Afghan Page Styles */
+.afghan-page .content-container {
+    display: flex; 
+    gap: 30px; 
+    padding: 0; /* Remove any padding that might push the image down */
+    align-items: flex-start; /* Align both the image and text to the top */
+}
+
+.afghan-page .image-container img {
+    width: 400px; /* Makes the image fill the container */
+    height: auto; /* Maintains the image's aspect ratio */
+    position: flex;
+    align-items: flex-start;
+    padding: 10%;
+}
+
+.afghan-page .text-container {
+    flex: 1; /* Allow the text to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure text starts from the top */
+    padding: 5%;
+}
+
+.afghan-page .text-container h2 {
+    text-align: left; /* Align the title to the left */
+    margin-top: 0; /* Remove any top margin */
+}
+
+.afghan-page .text-container p {
+    padding: 0;
+}
+
+
+
+.mural-page .content-container {
+    display: flex; 
+    gap: 30px; 
+    padding: 0; /* Remove any padding that might push the image down */
+    align-items: flex-start; /* Align both the image and text to the top */
+}
+
+.mural-page .image-container img {
+    width: 500px; /* Makes the image fill the container */
+    height: auto; /* Maintains the image's aspect ratio */
+    position: flex;
+    align-items: flex-start;
+    padding: 10%;
+}
+
+.mural-page .text-container {
+    flex: 1; /* Allow the text to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure text starts from the top */
+    padding: 5%;
+}
+
+.mural-page .text-container h2 {
+    text-align: left; /* Align the title to the left */
+    margin-top: 0; /* Remove any top margin */
+}
+
+.mural-page .text-container p {
+    padding: 0;
+}
+
+
+.book-page .content-container {
+    display: flex; 
+    gap: 30px; 
+    padding: 0; /* Remove any padding that might push the image down */
+    align-items: flex-start; /* Align both the image and text to the top */
+}
+
+.book-page .image-container img {
+    width: 470px; /* Makes the image fill the container */
+    height: auto; /* Maintains the image's aspect ratio */
+    position: flex;
+    align-items: flex-start;
+    padding: 10%;
+}
+
+.book-page .text-container {
+    flex: 1; /* Allow the text to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure text starts from the top */
+    padding: 5%;
+}
+
+.book-page .text-container h2 {
+    text-align: left; /* Align the title to the left */
+    margin-top: 0; /* Remove any top margin */
+}
+
+.book-page .text-container p {
+    padding: 0;
+}
+
+
+
+
+/* Contact sign styling */
+.contact-sign-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   size: 300px;
+}
+.contact-sign-container:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    position: relative;
+   width: 100%;
+}
+
+.contact-sign-container:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+    position: relative;
+   width: 100%;
+}
+
+.contact-sign-container:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    position: relative;
+   width: 100%;
+}
+
+.contact-sign-link {
+    display: inline-block;
+    line-height: 0; /* Removes spacing underneath the image */
+    font-size: 0; /* Ensures no extra space */
+}
+
+
+.contact-sign:hover {
+    transform: scale(1.05);
+}
+
+
+.carousel {
+    padding: 1rem;
+   
+    background: transparent;  
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 8px;
+    max-width: 840px;  
+    width: 100%; 
+    position: fixed;  
+    bottom: 35px;  /* 20px from the bottom */
+    right: 70px;  /* Moved further from the right (increased the value from 20px to 40px) */
+    z-index: 1000; /* Make sure it is above other content */
+    overflow: hidden; /* Hide anything that goes out of the carousel's bounds */
+}
+
+/* Container for the images */
+.images-container {
+    display: flex;
+    gap: 15px;  /* Space between images */
+    overflow-x: scroll;  /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory;  /* Ensure smooth scrolling to images */
+    -webkit-overflow-scrolling: touch;  /* Smooth scrolling for mobile devices */
+    padding-bottom: 10px; /* Ensure the scrollbar isn't hidden behind images */
+}
+
+/* Styling for individual images */
+.images-container img {
+    height: 200px;  /* Increased height for larger images */
+    width: 350px;  /* Increased width for larger images */
+    object-fit: cover;  /* Ensure images don't stretch or distort */
+    scroll-snap-align: center;  /* Ensure images snap to the center when scrolling */
+}
+
+.carousel2 {
+    padding: 1rem;
+    background: transparent;  
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 8px;
+    max-width: 650px;  
+    width: 200%; 
+    position: fixed;  
+    bottom: 35px;  /* 35px from the bottom */
+    right: 70px;  /* Moved further from the right (increased the value from 20px to 70px) */
+    z-index: 1000; /* Make sure it is above other content */
+    overflow: hidden; /* Hide anything that goes out of the carousel's bounds */
+}
+
+/* Container for the images */
+.images-container2 {
+    display: flex;
+    gap: 15px;  /* Space between images */
+    overflow-x: scroll;  /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory;  /* Ensure smooth scrolling to images */
+    -webkit-overflow-scrolling: touch;  /* Smooth scrolling for mobile devices */
+    padding-bottom: 10px; /* Ensure the scrollbar isn't hidden behind images */
+}
+
+/* Styling for individual images */
+.images-container2 img {
+    height: 300px;  /* Increased height to better accommodate portrait images */
+    width: auto;  /* Set width to auto to maintain aspect ratio */
+    object-fit: contain;  /* Ensures that the entire image is visible without cutting off */
+    scroll-snap-align: center;  /* Ensure images snap to the center when scrolling */
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content-container3 {
+    height: 100vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px;
+    width: 100%; 
+    max-width: 500px; 
+    padding: 20px; 
+    position: relative; 
+    left: 20px; 
+}
+
+.contact-inputs {
+    width: 100%;
+    height: 50px;
+    border: 2px solid #ddd; 
+    outline: none;
+    padding-left: 15px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+
+.contact-left textarea {
+    width: 100%; 
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+    resize: none; 
+}
+
+.contact-inputs:focus {
+    border: 2px solid black;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: black; 
+    cursor: pointer;
+}
+
+.contact-left button img {
+    width: 20px;
+    height: 20px;
 }
